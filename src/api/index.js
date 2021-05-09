@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const API = Axios.create({ baseURL: "http://localhost:3001" });
+const API = Axios.create({ baseURL: "https://auth-appz.herokuapp.com" });
 
 API.interceptors.response.use(
   (response) => response,
