@@ -2,6 +2,8 @@
 
 Login/Sign Up page. Google Sign In included. 
 
+https://auth-appz.netlify.app/
+
 # Tech Stacks
 
 - Frontend
