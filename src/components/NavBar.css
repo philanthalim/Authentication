@@ -1,0 +1,54 @@
+.navbar-container {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  align-items: center;
+  border-bottom: 0.5px solid grey;
+}
+
+.left-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+  font-size: 1.4rem;
+}
+.oregon {
+  text-decoration: none;
+  color: black;
+}
+.right-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+.signin-btn {
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #2d2d2e;
+  font-size: 1rem;
+  outline: none;
+}
+.signout-btn {
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #2d2d2e;
+  font-size: 1rem;
+  outline: none;
+}
+.signout-btn:hover {
+  background-color: #b8c4b6;
+}
+.signin-btn:hover {
+  background-color: #b8c4b6;
+}
