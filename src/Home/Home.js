@@ -1,7 +1,5 @@
 import React from "react";
 import skin1 from "./skin1.jpeg";
-import coffee from "./whiteCoffee.jpeg";
-import green2 from "./green2.jpg";
 import "./Home.css";
 import Footer from "../components/Footer";
 import Slider from "react-slick";

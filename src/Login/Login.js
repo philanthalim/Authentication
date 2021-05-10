@@ -15,8 +15,7 @@ const Login = ({ data }) => {
   const [isLogIn, setLogIn] = useState(true);
   const dispatch = useDispatch();
   const history = useHistory();
-console.log(process.env)
-  const googleID = process.env.REACT_GOOGLE_ID;
+ 
   const googleSuccess = async (res) => {
     const result = res?.profileObj;
     const token = res?.tokenId;
@@ -58,7 +57,7 @@ console.log(process.env)
 
   return (
     <>
-      <div className="login-container" >
+      <div className="login-container">
         <form className="form" onSubmit={submitForm}>
           <h1>{isLogIn ? "Sign In" : "Sign Up"}</h1>
           {data === "" ? null : <p style={{ color: "red" }}>{data}</p>}
@@ -118,7 +117,7 @@ console.log(process.env)
             className="google-btn"
             onSuccess={googleSuccess}
             onFailure={googleFailure}
-            clientId={googleID}
+            clientId={'93100168704-lrn671fgtgd4rm5o9akodra6b52bkfg2.apps.googleusercontent.com'}
           />
           <button className="toggle-btn" onClick={toggle}>
             {" "}

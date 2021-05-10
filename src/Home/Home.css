@@ -29,6 +29,9 @@
   height: 300px;
   object-fit: cover;
 }
+.text {
+  margin-right: 40px;
+}
 
 .img {
   width: 320px;
@@ -59,10 +62,7 @@
     height: 150px;
   }
   .left {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
   }
   .right {
     width: 100%;

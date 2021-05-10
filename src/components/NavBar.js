@@ -28,7 +28,7 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="right-container">
-        <p style={{ marginRight: "10px" }}>
+        <p className="user-name">
           {" "}
           {user === undefined ? null : `Hi ${user}! `}
         </p>
@@ -38,7 +38,7 @@ const NavBar = () => {
             <button className="signin-btn">Sign in</button>
           </Link>
         ) : (
-          <button className="signout-btn" onClick={logout}>
+          <button className="signin-btn" onClick={logout}>
             Log Out
           </button>
         )}
