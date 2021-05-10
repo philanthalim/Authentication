@@ -36,8 +36,11 @@ const Home = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    cssEase: "linear",
     nextArrow: <SampleNextArrow to="next" />,
-    prevArrow: <SamplePrevArrow />,
+    prevArrow: <SamplePrevArrow to="prev" />,
     responsive: [
       {
         breakpoint: 1024,
@@ -49,7 +52,7 @@ const Home = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 850,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -57,7 +60,7 @@ const Home = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 300,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -100,11 +103,11 @@ const Home = () => {
         </Slider>
       </div>
       <div className="section-three">
-        <div className='left'>
+        <div className="left">
           <img className="last-img" alt="green2" src={skin1}></img>
         </div>
-        <div className='right'>
-          <p className='text'>
+        <div className="right">
+          <p className="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
