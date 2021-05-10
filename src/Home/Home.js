@@ -106,7 +106,7 @@ const Home = () => {
           <img className="last-img" alt="green2" src={skin1}></img>
         </div>
         <div className='right'>
-          <p>
+          <p className='text'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
