@@ -55,3 +55,8 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+@media (min-width: 1080px) {
+  .login-container {
+    min-height: 850px;
+  }
+}

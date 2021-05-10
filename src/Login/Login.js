@@ -15,7 +15,7 @@ const Login = ({ data }) => {
   const [isLogIn, setLogIn] = useState(true);
   const dispatch = useDispatch();
   const history = useHistory();
-
+console.log(process.env)
   const googleID = process.env.REACT_GOOGLE_ID;
   const googleSuccess = async (res) => {
     const result = res?.profileObj;
@@ -58,7 +58,7 @@ const Login = ({ data }) => {
 
   return (
     <>
-      <div className="login-container" style={{ height: "500px" }}>
+      <div className="login-container" >
         <form className="form" onSubmit={submitForm}>
           <h1>{isLogIn ? "Sign In" : "Sign Up"}</h1>
           {data === "" ? null : <p style={{ color: "red" }}>{data}</p>}

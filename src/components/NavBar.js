@@ -24,7 +24,7 @@ const NavBar = () => {
     <div className="navbar-container">
       <div className="left-container">
         <Link className="oregon" to="/">
-          Oregon
+          ONNE
         </Link>
       </div>
       <div className="right-container">
