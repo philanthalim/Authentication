@@ -12,8 +12,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  background-color: null;
-  width: 500px;
+  width: 33rem;
   margin-top: 100px;
 }
 .form-header {
@@ -27,7 +26,6 @@
   margin-top: 10px;
 }
 input {
-  width: 30rem;
   height: 30px;
   border-radius: 5px;
   border: 0.5px solid grey;
@@ -67,5 +65,11 @@ input {
 @media (min-width: 1080px) {
   .login-container {
     min-height: 850px;
+  }
+}
+@media (max-width: 50em) {
+  .form {
+    width: 26rem;
+    margin-top: 70px;
   }
 }
