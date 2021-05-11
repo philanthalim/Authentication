@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React , { useState, useEffect} from "react";
 import { useHistory } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
@@ -52,7 +51,11 @@ const Login = ({ data }) => {
     setFormData({ ...formData, [e.target.className]: e.target.value });
   };
   useEffect(() => {
+    if (localStorage.getItem('profile')){
+      history.push('/')
+    }
     dispatch({ type: "ERROR", data: "" });
+    
   }, []);
 
   return (
