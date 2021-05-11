@@ -15,7 +15,7 @@ const Login = ({ data }) => {
   const [isLogIn, setLogIn] = useState(true);
   const dispatch = useDispatch();
   const history = useHistory();
- 
+
   const googleSuccess = async (res) => {
     const result = res?.profileObj;
     const token = res?.tokenId;
@@ -59,7 +59,10 @@ const Login = ({ data }) => {
     <>
       <div className="login-container">
         <form className="form" onSubmit={submitForm}>
-          <h1>{isLogIn ? "Sign In" : "Sign Up"}</h1>
+          <div className='form-header'>
+            <h1>{isLogIn ? "Sign In" : "Sign Up"}</h1>
+          </div>
+
           {data === "" ? null : <p style={{ color: "red" }}>{data}</p>}
 
           {isLogIn ? (
@@ -88,7 +91,7 @@ const Login = ({ data }) => {
               alignItems: "center",
             }}
           >
-            <input type="checkbox" onClick={showPassword}></input>
+            <input className='checkbox' type="checkbox" onClick={showPassword}></input>
             <p>Show password</p>
           </div>
 
@@ -117,7 +120,9 @@ const Login = ({ data }) => {
             className="google-btn"
             onSuccess={googleSuccess}
             onFailure={googleFailure}
-            clientId={'93100168704-lrn671fgtgd4rm5o9akodra6b52bkfg2.apps.googleusercontent.com'}
+            clientId={
+              "93100168704-lrn671fgtgd4rm5o9akodra6b52bkfg2.apps.googleusercontent.com"
+            }
           />
           <button className="toggle-btn" onClick={toggle}>
             {" "}
