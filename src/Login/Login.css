@@ -73,3 +73,9 @@ input {
     margin-top: 70px;
   }
 }
+@media (max-width: 40em) {
+  .form {
+    width: 20rem;
+    margin-top: 70px;
+  }
+}
