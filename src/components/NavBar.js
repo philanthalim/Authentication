@@ -1,4 +1,4 @@
-import React , { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory, Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
@@ -33,7 +33,7 @@ const NavBar = () => {
         </p>
 
         {user === undefined ? (
-          <Link to="/auth">
+          <Link style={{ textDecoration: "none" }} to="/auth">
             <button className="signin-btn">Sign in</button>
           </Link>
         ) : (
