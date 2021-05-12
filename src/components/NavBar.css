@@ -31,6 +31,10 @@
   font-size: 1rem;
 }
 .signin-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border-radius: 5px;
   width: 100px;
@@ -45,9 +49,8 @@
   background-color: #b8c4b6;
 }
 @media (max-width: 50em) {
-
   .signin-btn {
-    width:80px;
+    width: 85px;
     font-size: 0.9rem;
   }
   .user-name {

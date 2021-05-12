@@ -1,4 +1,4 @@
-import React , { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
@@ -21,7 +21,9 @@ const Login = ({ data }) => {
     try {
       dispatch({ type: "AUTH", data: { result, token } });
       history.push("/home");
-    } catch (error) {}
+    } catch (error) {
+      alert(error);
+    }
   };
   const googleFailure = (e) => {};
   const toggle = () => {
@@ -51,18 +53,17 @@ const Login = ({ data }) => {
     setFormData({ ...formData, [e.target.className]: e.target.value });
   };
   useEffect(() => {
-    if (localStorage.getItem('profile')){
-      history.push('/')
+    if (localStorage.getItem("profile")) {
+      history.push("/");
     }
     dispatch({ type: "ERROR", data: "" });
-    
   }, []);
 
   return (
     <>
       <div className="login-container">
         <form className="form" onSubmit={submitForm}>
-          <div className='form-header'>
+          <div className="form-header">
             <h1>{isLogIn ? "Sign In" : "Sign Up"}</h1>
           </div>
 
@@ -94,7 +95,11 @@ const Login = ({ data }) => {
               alignItems: "center",
             }}
           >
-            <input className='checkbox' type="checkbox" onClick={showPassword}></input>
+            <input
+              className="checkbox"
+              type="checkbox"
+              onClick={showPassword}
+            ></input>
             <p>Show password</p>
           </div>
 
