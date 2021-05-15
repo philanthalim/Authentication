@@ -5,13 +5,16 @@ import { useDispatch } from "react-redux";
 import { signin, signup } from "../actions/auth";
 import Footer from "../components/Footer";
 import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 import "./Login.css";
+import google from "./google-icon.svg";
 
 const initialState = { name: "", email: "", password: "", confirmPassword: "" };
-const Login = ({ data }) => {
+const Login = ({ error }) => {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState(initialState);
   const [isLogIn, setLogIn] = useState(true);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -34,9 +37,17 @@ const Login = ({ data }) => {
     if (isLogIn && submit) {
       //sign in
       dispatch(signin(formData, history));
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     } else if (!isLogIn && submit) {
       //sign up
       dispatch(signup(formData, history));
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
     }
   };
 
@@ -67,7 +78,7 @@ const Login = ({ data }) => {
             <h1>{isLogIn ? "Sign In" : "Sign Up"}</h1>
           </div>
 
-          {data === "" ? null : <p style={{ color: "red" }}>{data}</p>}
+          {error === "" ? null : <p style={{ color: "red" }}>{error}</p>}
 
           {isLogIn ? (
             <></>
@@ -122,10 +133,25 @@ const Login = ({ data }) => {
             className="submit-btn"
             type="submit"
           >
-            {isLogIn ? "Sign In" : "Sign Up"}
+            {isLogIn && !loading ? (
+              "Sign In"
+            ) : !isLogIn && !loading ? (
+              "Sign Up"
+            ) : (
+              <Loader type="Oval" color="black" height={22} width={22} />
+            )}
           </button>
           <GoogleLogin
-            className="google-btn"
+            render={(renderProps) => (
+              <button
+                className="google-btn"
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+              >
+                <img className="google-icon" src={google} alt=""></img>
+                {isLogIn ? "Sign in with Google" : "Sign up with Google"}
+              </button>
+            )}
             onSuccess={googleSuccess}
             onFailure={googleFailure}
             clientId={
@@ -146,6 +172,9 @@ const Login = ({ data }) => {
 };
 
 const mapStateToProps = (state) => {
-  return { data: state.errorReducer.errorMsg };
+  //console.log(state.authReducer)
+  return {
+    error: state.errorReducer.errorMsg,
+  };
 };
 export default connect(mapStateToProps)(Login);

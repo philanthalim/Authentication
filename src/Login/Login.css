@@ -51,7 +51,25 @@ input {
   background-color: #b8c4b6;
 }
 .google-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 35px;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid #414042;
+  box-shadow: 1px;
+  color: #2d2d2e;
+  cursor: pointer;
   outline: none;
+}
+.google-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
 }
 .toggle-btn {
   background-color: transparent;

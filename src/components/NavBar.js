@@ -6,6 +6,7 @@ import "./NavBar.css";
 const NavBar = () => {
   const getProfile = JSON.parse(localStorage.getItem("profile"));
   const [user, setUser] = useState(null);
+ 
   const location = useLocation();
   const dispatch = useDispatch();
   const history = useHistory();
