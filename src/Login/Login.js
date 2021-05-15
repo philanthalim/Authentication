@@ -40,14 +40,14 @@ const Login = ({ error }) => {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 4000);
     } else if (!isLogIn && submit) {
       //sign up
       dispatch(signup(formData, history));
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 4000);
     }
   };
 
