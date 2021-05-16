@@ -1,10 +1,11 @@
 .navbar-container {
-  background-color: white;
+  background-color: black;
   display: flex;
   flex-direction: row;
   height: 60px;
   align-items: center;
-  border-bottom: 0.5px solid grey;
+  color: white;
+ 
 }
 
 .left-container {
@@ -17,7 +18,7 @@
 }
 .oregon {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .right-container {
   display: flex;
@@ -35,18 +36,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: #d4af37;
   border-radius: 5px;
   width: 100px;
   height: 30px;
   cursor: pointer;
-  border: 1px solid #2d2d2e;
+  border: 1px solid #d4af37;
   font-size: 1rem;
   outline: none;
+
 }
 
 .signin-btn:hover {
-  background-color: #b8c4b6;
+  background-color: null;
 }
 @media (max-width: 50em) {
   .signin-btn {
