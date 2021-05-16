@@ -1,34 +1,37 @@
 import React from "react";
 import "./Home.css";
 import Footer from "../components/Footer";
-import black3 from "./black3.png";
+import korea from "./korea.jpeg";
+import mel from "./melbourne.jpg";
+import japan from "./japan.jpeg";
 import black2 from "./black2.jpeg";
+import black4 from "./b4.jpeg";
 
 const Home = () => {
   return (
     <div>
-      <img src={black3} alt="" className="section-one"></img>
+      <img src={black4} alt="" className="section-one"></img>
       <div className="section-two">
         <div className="header-container">
-          <h3>New Arrivals</h3>
+          <h3>OUR ACCOMPLISHMENTS</h3>
         </div>
         <div className="outer-sub-container">
           <div className="inner-sub-container">
-            <img className="img" alt="black2" src={black2}></img>
+            <img className="img" alt="black2" src={korea}></img>
             <div className="text-container">
-              <h3>Rock On Music Festival</h3>
-              <p style={{ color: "white" }}>Singapore</p>
+              <h3>SSD Conference</h3>
+              <p style={{ color: "white" }}>South Korea</p>
             </div>
           </div>
           <div className="inner-sub-container">
-            <img className="img" alt="black2" src={black2}></img>
+            <img className="img" alt="black2" src={mel}></img>
             <div className="text-container">
-              <h3>Rock On Music Festival</h3>
-              <p style={{ color: "white" }}>Dubai</p>
+              <h3>Global Leaders Talk</h3>
+              <p style={{ color: "white" }}>Melbourne</p>
             </div>
           </div>
           <div className="inner-sub-container">
-            <img className="img" alt="black2" src={black2}></img>
+            <img className="img" alt="black2" src={japan}></img>
             <div className="text-container">
               <h3>Rock On Music Festival</h3>
               <p style={{ color: "white" }}>Japan</p>
@@ -38,18 +41,17 @@ const Home = () => {
       </div>
       <div className="section-three">
         <div className="left">
-          <img className="last-img" alt="green2" src={black2}></img>
+          <div className="sub-left">
+            <h2 className="text">Why choose us?</h2>
+            <p>
+              Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
+              dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
+              amet
+            </p>
+          </div>
         </div>
         <div className="right">
-          <p className="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <img className="last-img" alt="green2" src={black2}></img>
         </div>
       </div>
 
