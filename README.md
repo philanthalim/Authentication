@@ -1,6 +1,6 @@
 # OAuth
 
-Login/Sign Up page. Google Sign In included. 
+Frictionless Authentication with Google Sign In option. 
 
 https://auth-appz.netlify.app/
 
