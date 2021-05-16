@@ -62,7 +62,12 @@
 }
 @media (max-width: 50em) {
   .signin-btn {
-    width: 85px;
+    width: 80px;
     font-size: 0.9rem;
+    padding:0px
+  }
+  .right-container {
+    margin-right: 10px;
+   
   }
 }
