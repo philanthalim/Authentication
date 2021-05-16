@@ -5,7 +5,6 @@
   height: 60px;
   align-items: center;
   color: white;
- 
 }
 
 .left-container {
@@ -26,10 +25,21 @@
   align-items: center;
   justify-content: flex-end;
   margin-right: 20px;
+  font-family: "Secular One", sans-serif;
 }
-.user-name {
-  margin-right: 10px;
-  font-size: 1rem;
+.badge {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #d4af37;
+  margin-right: 15px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 .signin-btn {
   display: flex;
@@ -44,7 +54,7 @@
   border: 1px solid #d4af37;
   font-size: 1rem;
   outline: none;
-
+  font-family: 'Secular One', sans-serif;
 }
 
 .signin-btn:hover {
@@ -53,9 +63,6 @@
 @media (max-width: 50em) {
   .signin-btn {
     width: 85px;
-    font-size: 0.9rem;
-  }
-  .user-name {
     font-size: 0.9rem;
   }
 }

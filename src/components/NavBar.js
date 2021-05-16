@@ -5,8 +5,8 @@ import "./NavBar.css";
 
 const NavBar = () => {
   const getProfile = JSON.parse(localStorage.getItem("profile"));
-  const [user, setUser] = useState(null);
- 
+  const [user, setUser] = useState("");
+
   const location = useLocation();
   const dispatch = useDispatch();
   const history = useHistory();
@@ -28,18 +28,19 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="right-container">
-        <p className="user-name">
-          {" "}
-          {user === undefined ? null : `Hi ${user}! `}
-        </p>
+        {typeof user === "undefined" ||
+        user === "" ||
+        typeof user === "object" ? null : (
+          <div className="badge">{user[0].toUpperCase()}</div>
+        )}
 
         {user === undefined ? (
           <Link style={{ textDecoration: "none" }} to="/auth">
-            <button className="signin-btn">Sign in</button>
+            <button className="signin-btn">SIGN IN</button>
           </Link>
         ) : (
           <button className="signin-btn" onClick={logout}>
-            Log Out
+            LOG OUT
           </button>
         )}
       </div>
